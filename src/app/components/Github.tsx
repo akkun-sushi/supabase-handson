@@ -9,7 +9,7 @@ const Github = () => {
       provider: "github",
       options: {
         //認証後にリダイレクトするURL
-        redirectTo: "http://localhost:3000/dashboard",
+        redirectTo: process.env.NEXT_PUBLIC_REDIRECT_URL,
       },
     });
     if (error) {
@@ -21,9 +21,13 @@ const Github = () => {
     <div className="container github">
       <h1>Github Authentication</h1>
       <h3>Create an account</h3>
-      <button onClick={handleSignIn} className="gsi-material-button">Sign up with Github</button>
+      <button onClick={handleSignIn} className="gsi-material-button">
+        Sign up with Github
+      </button>
       <h3>Already have an account?</h3>
-      <button onClick={handleSignIn} className="gsi-material-button">Sign in with Github</button>
+      <button onClick={handleSignIn} className="gsi-material-button">
+        Sign in with Github
+      </button>
     </div>
   );
 };
