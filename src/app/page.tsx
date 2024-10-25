@@ -1,5 +1,5 @@
 import "./style/home.css";
-import Email from "./components/Emai";
+import Email from "./components/Email";
 import Google from "./components/Google";
 import Twitter from "./components/Twitter";
 import Github from "./components/Github";
