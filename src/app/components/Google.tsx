@@ -11,7 +11,7 @@ const Google = () => {
         //サインイン時にユーザーの確認を求める
         queryParams: { prompt: "consent" },
         //認証後にリダイレクトするURL
-        redirectTo: "http://localhost:3000/dashboard",
+        redirectTo: process.env.NEXT_PUBLIC_REDIRECT_URL,
       },
     });
     if (error) {
