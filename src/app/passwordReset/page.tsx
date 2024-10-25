@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 
-const passwordReset = () => {
+const PasswordReset = () => {
   const router = useRouter();
   const [password, setPassword] = useState("");
   const [confirmed, setConfirmed] = useState("");
@@ -49,4 +49,4 @@ const passwordReset = () => {
   );
 };
 
-export default passwordReset;
+export default PasswordReset;
