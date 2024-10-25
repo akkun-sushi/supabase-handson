@@ -66,7 +66,7 @@ const Email = () => {
     //入力されたメールとデータベースに記録されたメールが一致している場合
     if (confirmedEmail?.length === 1) {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: "http://localhost:3000/passwordReset",
+        redirectTo: process.env.NEXT_PUBLIC_RESET_PASSWORD_URL,
       });
       if (error) {
         console.error("Error sending password reset email:", error.message);
